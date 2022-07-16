@@ -44,6 +44,65 @@
 
 </details>
 
+
+## 🤖 Bot Requirements
+
+<details>
+  <summary>Click To See Bot Requirments</summary>
+
+  * A Token Ofcourse You Will Have That, As You Are Here, If You Don't Get It From [Discord Developer Portal](https://discord.dev)
+  * Mongo URI(Universal Resource Identifier) Get The Free Database, And Get Started
+
+</details>
+
+
+## Importing The Files
+
+<details>
+  <summary>Click To See The Step</summary>
+
+  * Use ```git clone https://github.com/Rtxeon/SynthMusic.git``` In The Shell
+  * Or Do It Manually By Downloading
+
+</details>
+
+## Setting The Configuration
+
+<details>
+  <summary>Click To See The Step</summary>
+
+  * Filling The Config.js 
+  ```js
+    module.exports = {
+      Bot: {
+        Token: process.env.Token || ".",
+        Prefix: process.env.Prefix || "",
+      },
+
+      OwnerId: ["", ""],
+      Mongo_URL: process.env.Mongo_URL || "",
+      SlashSupport: true, //If You Want Slash CMD In Your Bot Set This To True Else False
+      SlashAsGlobal: true //If You Want To Deploy Slash CMD As Global Set This To True And If You Want To Deploy It On Each Server Set It False (To Make This Option Work     You Need To True Slash Support)
+    }
+  ``` 
+</details>
+
+## Installing The Packages
+
+<details>
+  <summary>Click To See The Step</summary>
+
+  * Use ```npm i``` Or ```npm install``` In The Shell
+</details>
+
+## Running The Code, The Final Step
+
+<details>
+  <summary>Click To See The Step</summary>
+
+  * Use ```node index.js``` Or ```npm start``` In The Shell
+</details>
+
 # 🔐 License
 
 Distributed under the Apache 2.0 License. See [`LICENSE`](https://github.com/Rtxeon/SynthMusic/blob/master/LICENSE) for more information.
