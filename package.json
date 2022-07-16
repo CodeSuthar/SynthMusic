@@ -1,6 +1,6 @@
 {
   "name": "synthmusic",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "A Simple Music Bot Made Using Discord-Player Package - (Beta)",
   "main": "index.js",
   "scripts": {
