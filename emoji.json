@@ -1,0 +1,17 @@
+{
+	"join": "📥",
+	"leave": "📤",
+  "pause": "⏸️",
+  "play": "▶️",
+  "skip": "⏭️",
+  "volumemiddle": "🔉",
+	"volumedown": "🔈",
+	"volumeup": "🔊",
+  "stop": "⏹️",
+  "queue": "🎶",
+	"playlist": "🎶",
+  "eject": "⏏️",
+  "home": "🏠",
+  "info": "ℹ️",
+  "gear": "⚙️"
+}
