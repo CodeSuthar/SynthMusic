@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Rtxeon/SynthMusic.git"
   },
   "author": "Rtxeon",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/Rtxeon/SynthMusic/issues"
   },
