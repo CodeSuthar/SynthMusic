@@ -50,14 +50,13 @@ Distributed under the Apache 2.0 License. See [`LICENSE`](https://github.com/Rtx
 
 [version-shield]: https://img.shields.io/github/package-json/v/Rtxeon/SynthMusic?style=for-the-badge
 [version-url]: https://github.com/Rtxeon/SynthMusic
-[contributors-shield]: https://img.shields.io/github/contributors/Rtxeon/SynthMusic.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Rtxeon/SynthMusic?style=for-the-badge
 [contributors-url]: https://github.com/Rtxeon/SynthMusic/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Rtxeon/SynthMusic.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/Rtxeon/SynthMusic?style=for-the-badge
 [forks-url]: https://github.com/Rtxeon/SynthMusic/network/members
 [stars-shield]: https://img.shields.io/github/stars/Rtxeon/SynthMusic.svg?style=for-the-badge
 [stars-url]: https://github.com/Rtxeon/SynthMusic/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Rtxeon/SynthMusic.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/Rtxeon/SynthMusic?style=for-the-badge
 [issues-url]: https://github.com/Rtxeon/SynthMusic/issues
-[license-shield]: https://img.shields.io/github/license/Rtxeon/SynthMusic.svg?style=for-the-badge
-[license-url]: https://github.com/Rtxeon/SynthMusic/blob/master/LICENSE
-[spon-img]: https://media.discordapp.net/attachments/979364157541462066/982734017671606322/Vultr_Logo_Download_Vector.png
+[license-shield]: https://img.shields.io/github/license/Rtxeon/SynthMusic?style=for-the-badge
+[license-url]: https://github.com/Rtxeon/SynthMusic/blob/main/LICENSE
