@@ -7,13 +7,13 @@ module.exports = {
     name: "setprefix",
     description: "Set Custom Prefix",
     options: [
-    {
-      name: "prefix",
-      description: "New Prefix To Set",
-      required: true,
-      type: "STRING"
-		}
-	],  
+      {
+        name: "prefix",
+        description: "New Prefix To Set",
+        required: true,
+        type: "STRING"
+      }
+    ],  
   run: async (client, interaction, prefix) => {
     if (!interaction.replied) await interaction.deferReply({ ephemeral: true });
     const data = await db.findOne({ Guild: interaction.guildId});
