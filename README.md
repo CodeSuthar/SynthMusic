@@ -16,7 +16,7 @@
 * No Need Of Lavalink In SynthMusic
 * 🎶 Available Music Sources
 ```
-- ✅ YouTube (Live Stram Supported)
+- ✅ YouTube (Live Stream Supported)
 - ✅ SoundCloud
 - ✅ http (you can use radio for it)
 - ✅ Spotify
