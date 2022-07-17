@@ -1,6 +1,8 @@
 const { CommandInteraction, Client, MessageEmbed } = require("discord.js");
 const db = require("../../../Database/prefix.js");
 
+//SetPrefix By Blacky
+
 module.exports = {
     name: "setprefix",
     description: "Set Custom Prefix",
