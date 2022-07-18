@@ -5,7 +5,7 @@ module.exports = {
   category: "Information",
   description: "to see the commands",
   usage: "!help and !help [command]",
-  execute: async (message, args, client, prefix, interaction) => {
+  execute: async (message, args, client, prefix) => {
     
     let query = args.join(" ");
     
@@ -40,8 +40,8 @@ module.exports = {
       `**Hey <@${message.author.id}> 👋, I'm <@969558840926437406> , A cool 😎 and music bot with Awesome Features to enhance your mood with more easier way. Find out what I can do using the Dropdown Menu below.**`
     )
     .addField("___Commands Categories are Listed Below___",  `${config} \`:\`   **Configuration**\n${info}  \`:\` **Information**\n${music}  \`:\` **Music**\n\n • Select Category From Below Menu**`)
-    .setThumbnail("https://media.discordapp.net/attachments/981333937181851809/995667316463374416/unknown.png")
-    .setFooter({ text: `Zeon Development 💖`, iconURL: "https://media.discordapp.net/attachments/981333937181851809/995667316463374416/unknown.png"})
+    .setThumbnail(client.user.displayAvatarURL())
+    .setFooter({ text: `Helping You Is My Pleasure <3`, iconURL: client.user.displayAvatarURL() })
     .setTimestamp()
     
     const menu = new MessageSelectMenu()
@@ -81,7 +81,7 @@ module.exports = {
     .setDisabled('true')
     .setMinValues(1)
     .setMaxValues(1)
-    .setPlaceholder(`Interaction Disabled!`)
+    .setPlaceholder(`HelpMenu Has Been Expired!`)
     .addOptions([
       {
         label: "Can't Use It Lol",
@@ -143,7 +143,7 @@ module.exports = {
     
     collector.on("end", () => {
       if (!msg) return;
-      return msg.edit({ components: [] })
+      return msg.edit({ components: [row2] })
     })
   }
 };
