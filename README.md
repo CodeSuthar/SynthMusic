@@ -4,6 +4,7 @@
 <br>
 <br>
 <br>
+
 [![Version][version-shield]](version-url)
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -12,8 +13,6 @@
 [![MIT License][license-shield]][license-url]
 
 <a><b> Owners:- ! SяνKιℓℓєя✨🥀#4574 & Rtxeonᴸᴳᴺ#1622 </a></b>
-
-
 
 # 🦾 Features
 * No Need Of Lavalink In SynthMusic
