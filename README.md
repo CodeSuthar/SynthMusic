@@ -2,9 +2,9 @@
 <h2 align="center">Our Music Bot</h2>
 <h4 align="center">A Highly Powerful Music Bot Without Lavalink Which Is Gonna Have Setup, A Specific Text Channel For Bot Command Feature, And DJ System Soon</h4>
 <br>
+<a><b> Owners:- ! SяνKιℓℓєя✨🥀#4574 & Rtxeonᴸᴳᴺ#1622 </a></b>
 <br>
 <br>
-
 [![Version][version-shield]](version-url)
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -12,7 +12,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-<a><b> Owners:- ! SяνKιℓℓєя✨🥀#4574 & Rtxeonᴸᴳᴺ#1622 </a></b>
+
 
 # 🦾 Features
 * No Need Of Lavalink In SynthMusic
