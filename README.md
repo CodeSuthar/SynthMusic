@@ -26,11 +26,11 @@
 
 # 🖼️ Screenshots
   <a href="https://github.com/Rtxoen/SynthMusic">
-    <img src="https://cdn.discordapp.com/attachments/936524382501765140/997864273940332644/unknown.png">
+    <img src="https://cdn.discordapp.com/attachments/936524382501765140/998581794347692132/unknown.png">
     <img src="https://cdn.discordapp.com/attachments/936524382501765140/997864629122371685/unknown.png">
     <img src="https://media.discordapp.net/attachments/936524382501765140/997865171278110801/unknown.png">
     <img src="https://media.discordapp.net/attachments/936524382501765140/997865651068731512/unknown.png?width=532&height=406">
-    <img src="https://media.discordapp.net/attachments/936524382501765140/998581794347692132/unknown.png?width=623&height=406">
+    <img src="https://media.discordapp.net/attachments/936524382501765140/997871374792130671/unknown.png">
   </a>
 
 # Installation Guide 🔥
