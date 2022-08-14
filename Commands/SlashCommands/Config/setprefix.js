@@ -1,5 +1,5 @@
 const { EmbedBuilder, ApplicationCommandOptionType } = require("discord.js");
-const db = require("../../schema/prefix.js");
+const db = require("../../../Database/prefix.js");
 
 module.exports = {
     name: "setprefix",
