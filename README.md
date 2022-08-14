@@ -107,7 +107,7 @@
 
 # 🔐 License
 
-Distributed under the Apache 2.0 License. See [`LICENSE`](https://github.com/Rtxeon/SynthMusic/blob/master/LICENSE) for more information.
+Distributed under the Apache 2.0 License. See [`LICENSE`](https://github.com/Rtxeon/SynthMusic/blob/main/LICENSE) for more information.
 
 [version-shield]: https://img.shields.io/github/package-json/v/Rtxeon/SynthMusic?style=for-the-badge
 [version-url]: https://github.com/Rtxeon/SynthMusic
