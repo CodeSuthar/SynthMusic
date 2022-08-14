@@ -1,17 +1,18 @@
 {
 	"join": "📥",
 	"leave": "📤",
-  "pause": "⏸️",
-  "play": "▶️",
-  "skip": "⏭️",
-  "volumemiddle": "🔉",
+    "pause": "⏸️",
+    "play": "▶️",
+    "skip": "⏭️",
+    "volumemiddle": "🔉",
 	"volumedown": "🔈",
 	"volumeup": "🔊",
-  "stop": "⏹️",
-  "queue": "🎶",
+    "stop": "⏹️",
+    "queue": "🎶",
 	"playlist": "🎶",
-  "eject": "⏏️",
-  "home": "🏠",
-  "info": "ℹ️",
-  "gear": "⚙️"
+    "eject": "⏏️",
+    "home": "🏠",
+    "info": "ℹ️",
+    "gear": "⚙️",
+    "owner": "👑"
 }

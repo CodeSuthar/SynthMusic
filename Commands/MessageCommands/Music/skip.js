@@ -1,54 +1,54 @@
-const { MessageEmbed } = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
-  name: "skip",
-  category: "Music",
-  description: "Skip's A Music",
-  usage: "skip",
-  cooldown: 5,
-  execute: async (message, args, client, prefix) => {
+    name: "skip",
+    category: "Music",
+    description: "Skip's A Music",
+    usage: "skip",
+    cooldown: 5,
+    execute: async (message, args, SynthBot, prefix) => {
 
-    let queue = client.manager.getQueue(message.guild.id);
+        let queue = SynthBot.manager.getQueue(message.guild.id);
+        
+        if (!message.member.voice.channelId) {
+            const embed = new EmbedBuilder()
+            .setDescription("You Are Not Connected To A Voice Channed!")
+            .setColor("Random")
+            return message.reply({ embeds: [embed] })
+        }
     
-    if (!message.member.voice.channelId) {
-      const embed = new MessageEmbed()
-      .setDescription("You Are Not Connected To A Voice Channed!")
-      .setColor("RANDOM")
-      return message.reply({ embeds: [embed] })
-    }
-
-    if (queue && queue.connection.channel.id !== message.member.voice.channelId) {
-      const embed = new MessageEmbed()
-      .setDescription(`I'm Already Connected To <#${queue.connection.channel.id}> Voice Channel, I Can't Betray <#${queue.connection.channel.id}>!`)
-      .setColor("RANDOM")
-      return message.reply({ embeds: [embed] })
-    }
-
-    if (!queue) {
-      const embed = new MessageEmbed()
-      .setDescription(`There's No Player In The Guild`)
-      .setColor("RANDOM")
-      return message.reply({ embeds: [embed] })  
-    }
-
-    if (!queue.nowPlaying()) {
-      const embed = new MessageEmbed()
-      .setDescription(`There's No Player Playing In The Guild`)
-      .setColor("RANDOM")
-      return message.reply({ embeds: [embed] })  
-    }
+        if (queue && queue.connection.channel.id !== message.member.voice.channelId) {
+            const embed = new EmbedBuilder()
+            .setDescription(`I'm Already Connected To <#${queue.connection.channel.id}> Voice Channel, I Can't Betray <#${queue.connection.channel.id}>!`)
+            .setColor("Random")
+            return message.reply({ embeds: [embed] })
+        }
     
-    try {
-      const skip = client.emoji.skip
-      
-      const embed = new MessageEmbed()
-      .setDescription(`${skip} Skipped - [${queue.nowPlaying().title}](${queue.nowPlaying().url})`)
-      .setColor("RANDOM")
-      message.reply({ embeds: [embed] })
-      return queue.skip();
-    } catch (e) {
-      console.log(e)
-      return message.reply({ content: `Can't Skip The Track` })
+        if (!queue) {
+            const embed = new EmbedBuilder()
+            .setDescription(`There's No Player In The Guild`)
+            .setColor("Random")
+            return message.reply({ embeds: [embed] })  
+        }
+    
+        if (!queue.nowPlaying()) {
+            const embed = new EmbedBuilder()
+            .setDescription(`There's No Player Playing In The Guild`)
+            .setColor("Random")
+            return message.reply({ embeds: [embed] })  
+        }
+        
+        try {
+            const skip = SynthBot.emoji.skip
+            
+            const embed = new EmbedBuilder()
+            .setDescription(`${skip} Skipped - [${queue.nowPlaying().title}](${queue.nowPlaying().url})`)
+            .setColor("Random")
+            message.reply({ embeds: [embed] })
+            return queue.skip();
+        } catch (e) {
+          console.log(e)
+          return message.reply({ content: `Can't Skip The Track` })
+        }
     }
-  }
 }

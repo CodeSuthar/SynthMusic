@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-module.exports = async (client) => {
-  mongoose.connect(client.config.Mongo_URL, {
+module.exports = async (SynthBot) => {
+  mongoose.connect(SynthBot.config.Mongo_URL, {
     useNewUrlParser: true,
     autoIndex: false,
     connectTimeoutMS: 10000,

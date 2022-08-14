@@ -1,40 +1,58 @@
-const { Client, Intents, Collection } = require("discord.js");
-const client = new Client({
-  shards: "auto",
-  allowedMentions: {
-    parse: ["roles", "users", "everyone"],
-    repliedUser: false,
-  },
-  partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
-  intents: [
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_MEMBERS,
-    Intents.FLAGS.GUILD_VOICE_STATES
-  ]
+const { Client, Partials, GatewayIntentBits, Collection } = require("discord.js");
+const SynthClient = Client;
+const SynthBot = new SynthClient({
+    shards: "auto",
+    allowedMentions: {
+        everyone: false,
+        roles: false,
+        users: false
+    },
+    partials: [
+        Partials.Channel, 
+        Partials.Message, 
+        Partials.User, 
+        Partials.GuildMember 
+    ],
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildVoiceStates,
+        GatewayIntentBits.GuildMessages,
+    ],
 });
 const { Player } = require("discord-player");
-const { readdirSync } = require("fs")
+const { readdirSync } = require("fs");
 
-//Making Some Globals With Client
-client.commands = new Collection();
-client.slashCommands = new Collection();
-client.aliases = new Collection();
-client.cooldowns = new Collection();
-client.config = require("./config.js");
-client.password = client.config.Bot.Token;
-client.runfix = client.config.Bot.Prefix;
-client.emoji = require("./emoji.json");
- 
 //Adding The Music Manager
-client.manager = new Player(client);
+SynthBot.manager = new Player(SynthBot);
 
-//Loading THe Handler System
-readdirSync("./Handler/").forEach(file => {
-  require(`./Handler/${file}`)(client).then(() => {
-    const Handler = file.split(".")[0]
-    console.log(`[HANDLER] Loaded ${Handler} System`)
-  });
+//Defining Some Globals With The Help Of Client
+SynthBot.commands = new Collection();
+SynthBot.slashCommands = new Collection();
+SynthBot.aliases = new Collection();
+SynthBot.cooldowns = new Collection();
+SynthBot.config = require("./synthmusic.config.js");
+SynthBot.runfix = SynthBot.config.Bot.Prefix;
+SynthBot.emoji = require("./emoji.json");
+
+//Loading The Specific Handler Which Name's Are In Array
+[ "Commands", "SlashCommands", "ClientEvents", "PlayerEvents", "Mongoose", "HandlingError" ].forEach((Handler) => {
+    try {
+        require(`./Handler/${Handler}`)(SynthBot).then(() => {
+            console.log(`[HANDLER] Loaded ${Handler} System`)
+        });
+    } catch (e) {
+    console.log(`Error Found In Handler Called ${Handler}\nError:- ${e}`)
+  }
 });
 
-client.login(client.password)
+if (!SynthBot.config.Bot.Token) {
+    console.log(`[SynthBot] TokenError: No Token Was Found In The Config`)
+} else {
+    try {
+        SynthBot.login(SynthBot.config.Bot.Token) 
+    } catch (e) {
+        console.log(`[SynthBot] TokenError: The Token Which Was Supplied To Bot Is Invalid`)
+    }
+}
