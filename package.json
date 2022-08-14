@@ -4,7 +4,7 @@
     "description": "A Simple Music Bot Made Using Discord-Player Package - (Beta)",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js",
+        "start": "node index.js"
     },
     "repository": {
         "type": "git",
