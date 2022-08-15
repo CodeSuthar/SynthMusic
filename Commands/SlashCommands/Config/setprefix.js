@@ -4,8 +4,8 @@ const db = require("../../../Database/prefix.js");
 module.exports = {
     name: "setprefix",
     description: "Set a custom Prefix",
-    default_member_permissions: ['MANAGE_GUILD'],
-    dm_permission: false,
+    member_permissions: ['MANAGE_GUILD'],
+    dm: false,
     cooldown: 5,
     options: [
         {
