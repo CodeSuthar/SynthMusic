@@ -12,16 +12,15 @@ module.exports = async (SynthBot) => {
             if (!SlashCommand.description) return console.error(`[SLASH COMMANDS] DescriptionError: ${file.split(".")[0]} Application command description is required.`);
             SynthBot.slashCommands.set(SlashCommand.name, SlashCommand);
             console.log(`[SLASH COMMANDS] ${SlashCommand.name} Application Command Are Added For Being Registered To SynthBot`);
+            SlashCMD.push({
+                name: SlashCommand.name,
+                description: SlashCommand.description,
+                type: SlashCommand.type,
+                options: SlashCommand.options ? SlashCommand.options : null,
+                dm_permission: SlashCommand.dm ? SlashCommand.dm : null,
+                default_member_permissions: SlashCommand.member_permissions ? SlashCommand.resolve(SlashCommand.member_permissions).toString() : null
+            });
         }
-
-        SlashCMD.push({
-            name: SlashCommand.name,
-            description: SlashCommand.description,
-            type: SlashCommand.type,
-            options: SlashCommand.options ? SlashCommand.options : null,
-            dm_permission: SlashCommand.dm ? SlashCommand.dm : null,
-            default_member_permissions: SlashCommand.member_permissions ? SlashCommand.resolve(SlashCommand.member_permissions).toString() : null
-        });
     });
 
     SynthBot.on("ready", async () => {
