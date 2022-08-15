@@ -4,7 +4,7 @@ module.exports = {
     name: "ping",
     description: "Gets The Response Time",
     cooldown: 5,
-    dm_permission: false,
+    dm: false,
     run: async (SynthBot, interaction, prefix) => {
         await interaction.deferReply({ ephemeral: true })
         interaction.editReply({ content: `Pinging` }).then(() => {
