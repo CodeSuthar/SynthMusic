@@ -107,7 +107,7 @@ module.exports = {
         
         const filter = (interaction) => {
             if (interaction.user.id === message.author.id) return true;
-            return interaction.reply({
+            else return interaction.reply({
                 content: `:x: **Only ${message.author.tag} can use this interaction!**`,
                 ephemeral: true,
             });
